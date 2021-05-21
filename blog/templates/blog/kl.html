@@ -1,0 +1,16 @@
+{% extends "blog/base.html" %}
+{% block content %}
+ {% load static %}
+
+{% for r in courses %}
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{r.image.url}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{r.courseName}}</h5>
+    <p class="card-text">{{r.content}}</p>
+<a href="{% url 'Showfiles' r.id %}" class="btn btn-primary">Open Course</a>
+  </div>
+</div>
+<br>
+{% endfor %}
+{% endblock content %}

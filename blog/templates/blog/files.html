@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+{% block content %}
+ {% load static %}
+
+{% for r in allfiles %}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{r.title}}</h5>
+    <p class="card-text">{{r.content}}</p>
+
+    <a href="{{ r.file.url }}" class="btn btn-primary" target="_blank">Open pdf</a>
+
+  </div>
+</div>
+<br>
+{% endfor %}
+{% endblock content %}

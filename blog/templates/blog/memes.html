@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+{% block content %}
+{% load static %}
+
+{% for r in memes %}
+<center><div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{r.image.url}}" alt="Card image cap">
+
+</div>
+</center>
+{% endfor %}
+
+
+
+
+
+{% endblock content %}
